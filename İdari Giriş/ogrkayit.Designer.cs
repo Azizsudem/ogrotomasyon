@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ogrkayit));
             groupBox3 = new GroupBox();
             ogrbolum = new ComboBox();
             label12 = new Label();
@@ -38,11 +39,17 @@
             label24 = new Label();
             label27 = new Label();
             groupBox1 = new GroupBox();
+            Gender = new ComboBox();
+            cinsiyet = new Label();
             ogrposta = new MaskedTextBox();
+            velisoyadi = new MaskedTextBox();
             ogrtel = new MaskedTextBox();
+            veliadi = new MaskedTextBox();
+            label18 = new Label();
             ogradi = new MaskedTextBox();
             ogrsoyadi = new MaskedTextBox();
-            maskedkimlik = new MaskedTextBox();
+            label17 = new Label();
+            TCKimlik = new MaskedTextBox();
             ogrdogumyeri = new ComboBox();
             ogrtime = new DateTimePicker();
             label8 = new Label();
@@ -54,18 +61,9 @@
             label1 = new Label();
             button1 = new Button();
             pictureBox1 = new PictureBox();
-            label20 = new Label();
-            label18 = new Label();
-            label17 = new Label();
-            label15 = new Label();
-            veliadi = new MaskedTextBox();
-            velisoyadi = new MaskedTextBox();
-            velitel = new MaskedTextBox();
-            groupBox2 = new GroupBox();
             groupBox3.SuspendLayout();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            groupBox2.SuspendLayout();
             SuspendLayout();
             // 
             // groupBox3
@@ -79,9 +77,9 @@
             groupBox3.Controls.Add(label24);
             groupBox3.Controls.Add(label27);
             groupBox3.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 162);
-            groupBox3.Location = new Point(564, 226);
+            groupBox3.Location = new Point(559, 191);
             groupBox3.Name = "groupBox3";
-            groupBox3.Size = new Size(508, 233);
+            groupBox3.Size = new Size(508, 162);
             groupBox3.TabIndex = 18;
             groupBox3.TabStop = false;
             groupBox3.Text = "OKUL BİLGİLERİ";
@@ -90,8 +88,8 @@
             // 
             ogrbolum.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 162);
             ogrbolum.FormattingEnabled = true;
-            ogrbolum.Items.AddRange(new object[] { "Bilgisayar Programcılığı", "Elektrik-Elektronik Teknolojisi", "Makine", "Mekatronik", "", "Fizik", "Kimya", "Matematik", "Moleküler Biyoloji ve Genetik", "", "Bilgisayar Mühendisliği", "Elektrik – Elektronik Mühendisliği", "Endüstri Mühendisliği", "Makine Mühendisliği" });
-            ogrbolum.Location = new Point(291, 94);
+            ogrbolum.Items.AddRange(new object[] { "", "Bilgisayar Mühendisliği", "Elektrik – Elektronik Mühendisliği", "Makine Mühendisliği" });
+            ogrbolum.Location = new Point(291, 59);
             ogrbolum.Name = "ogrbolum";
             ogrbolum.Size = new Size(211, 30);
             ogrbolum.TabIndex = 24;
@@ -100,7 +98,7 @@
             // 
             label12.AutoSize = true;
             label12.Font = new Font("Book Antiqua", 16.2F, FontStyle.Italic, GraphicsUnit.Point, 162);
-            label12.Location = new Point(6, 128);
+            label12.Location = new Point(6, 90);
             label12.Name = "label12";
             label12.Size = new Size(87, 34);
             label12.TabIndex = 22;
@@ -111,7 +109,7 @@
             ogrdonem.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 162);
             ogrdonem.FormattingEnabled = true;
             ogrdonem.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8" });
-            ogrdonem.Location = new Point(291, 162);
+            ogrdonem.Location = new Point(291, 128);
             ogrdonem.Name = "ogrdonem";
             ogrdonem.Size = new Size(211, 30);
             ogrdonem.TabIndex = 21;
@@ -121,7 +119,7 @@
             ogrsinif.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 162);
             ogrsinif.FormattingEnabled = true;
             ogrsinif.Items.AddRange(new object[] { "1", "2", "3", "4" });
-            ogrsinif.Location = new Point(291, 128);
+            ogrsinif.Location = new Point(291, 94);
             ogrsinif.Name = "ogrsinif";
             ogrsinif.Size = new Size(211, 30);
             ogrsinif.TabIndex = 20;
@@ -137,7 +135,7 @@
             // 
             label23.AutoSize = true;
             label23.Font = new Font("Book Antiqua", 16.2F, FontStyle.Italic, GraphicsUnit.Point, 162);
-            label23.Location = new Point(6, 94);
+            label23.Location = new Point(6, 59);
             label23.Name = "label23";
             label23.Size = new Size(140, 34);
             label23.TabIndex = 4;
@@ -148,7 +146,7 @@
             label24.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label24.AutoSize = true;
             label24.Font = new Font("Book Antiqua", 16.2F, FontStyle.Italic, GraphicsUnit.Point, 162);
-            label24.Location = new Point(6, 162);
+            label24.Location = new Point(0, 124);
             label24.Name = "label24";
             label24.Size = new Size(124, 34);
             label24.TabIndex = 3;
@@ -166,12 +164,17 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(Gender);
+            groupBox1.Controls.Add(cinsiyet);
             groupBox1.Controls.Add(ogrposta);
+            groupBox1.Controls.Add(velisoyadi);
             groupBox1.Controls.Add(ogrtel);
+            groupBox1.Controls.Add(veliadi);
+            groupBox1.Controls.Add(label18);
             groupBox1.Controls.Add(ogradi);
             groupBox1.Controls.Add(ogrsoyadi);
             groupBox1.Controls.Add(label17);
-            groupBox1.Controls.Add(maskedkimlik);
+            groupBox1.Controls.Add(TCKimlik);
             groupBox1.Controls.Add(ogrdogumyeri);
             groupBox1.Controls.Add(ogrtime);
             groupBox1.Controls.Add(label8);
@@ -182,54 +185,108 @@
             groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(label1);
             groupBox1.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 162);
-            groupBox1.Location = new Point(42, 226);
+            groupBox1.Location = new Point(48, 191);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(508, 410);
+            groupBox1.Size = new Size(508, 372);
             groupBox1.TabIndex = 15;
             groupBox1.TabStop = false;
             groupBox1.Text = "KİŞİ BİLGİLERİ";
             // 
+            // Gender
+            // 
+            Gender.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            Gender.FormattingEnabled = true;
+            Gender.Items.AddRange(new object[] { "KADIN", "erkek", "Diğer" });
+            Gender.Location = new Point(291, 332);
+            Gender.Name = "Gender";
+            Gender.Size = new Size(211, 30);
+            Gender.TabIndex = 28;
+            // 
+            // cinsiyet
+            // 
+            cinsiyet.AutoSize = true;
+            cinsiyet.Font = new Font("Book Antiqua", 16.2F, FontStyle.Italic, GraphicsUnit.Point, 162);
+            cinsiyet.Location = new Point(6, 328);
+            cinsiyet.Name = "cinsiyet";
+            cinsiyet.Size = new Size(143, 34);
+            cinsiyet.TabIndex = 27;
+            cinsiyet.Text = "CİNSİYET";
+            // 
             // ogrposta
             // 
-            ogrposta.Location = new Point(252, 298);
+            ogrposta.Location = new Point(252, 233);
             ogrposta.Name = "ogrposta";
             ogrposta.Size = new Size(250, 30);
             ogrposta.TabIndex = 19;
             // 
+            // velisoyadi
+            // 
+            velisoyadi.Location = new Point(252, 297);
+            velisoyadi.Name = "velisoyadi";
+            velisoyadi.Size = new Size(250, 30);
+            velisoyadi.TabIndex = 25;
+            // 
             // ogrtel
             // 
-            ogrtel.Location = new Point(252, 265);
+            ogrtel.Location = new Point(252, 201);
             ogrtel.Name = "ogrtel";
             ogrtel.Size = new Size(250, 30);
             ogrtel.TabIndex = 18;
             // 
+            // veliadi
+            // 
+            veliadi.Location = new Point(252, 263);
+            veliadi.Name = "veliadi";
+            veliadi.Size = new Size(250, 30);
+            veliadi.TabIndex = 26;
+            // 
+            // label18
+            // 
+            label18.AutoSize = true;
+            label18.Font = new Font("Book Antiqua", 16.2F, FontStyle.Italic, GraphicsUnit.Point, 162);
+            label18.Location = new Point(0, 294);
+            label18.Name = "label18";
+            label18.Size = new Size(192, 34);
+            label18.TabIndex = 4;
+            label18.Text = "VELİ SOYADI";
+            // 
             // ogradi
             // 
-            ogradi.Location = new Point(252, 60);
+            ogradi.Location = new Point(252, 63);
             ogradi.Name = "ogradi";
             ogradi.Size = new Size(250, 30);
             ogradi.TabIndex = 15;
             // 
             // ogrsoyadi
             // 
-            ogrsoyadi.Location = new Point(252, 94);
+            ogrsoyadi.Location = new Point(252, 97);
             ogrsoyadi.Name = "ogrsoyadi";
             ogrsoyadi.Size = new Size(250, 30);
             ogrsoyadi.TabIndex = 14;
             // 
-            // maskedkimlik
+            // label17
             // 
-            maskedkimlik.Location = new Point(252, 26);
-            maskedkimlik.Name = "maskedkimlik";
-            maskedkimlik.Size = new Size(250, 30);
-            maskedkimlik.TabIndex = 13;
+            label17.AutoSize = true;
+            label17.Font = new Font("Book Antiqua", 16.2F, FontStyle.Italic, GraphicsUnit.Point, 162);
+            label17.Location = new Point(0, 260);
+            label17.Name = "label17";
+            label17.Size = new Size(135, 34);
+            label17.TabIndex = 5;
+            label17.Text = "VELİ ADI";
+            // 
+            // TCKimlik
+            // 
+            TCKimlik.Location = new Point(252, 29);
+            TCKimlik.Name = "TCKimlik";
+            TCKimlik.Size = new Size(250, 30);
+            TCKimlik.TabIndex = 13;
             // 
             // ogrdogumyeri
             // 
             ogrdogumyeri.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 162);
             ogrdogumyeri.FormattingEnabled = true;
             ogrdogumyeri.Items.AddRange(new object[] { "Adana  ", "Adıyaman  ", "Afyonkarahisar  ", "Ağrı  ", "Amasya  ", "Ankara  ", "Antalya  ", "Artvin  ", "Aydın  ", "Balıkesir  ", "Bilecik  ", "Bingöl  ", "Bitlis  ", "Bolu  ", "Burdur  ", "Bursa  ", "Çanakkale  ", "Çankırı  ", "Çorum  ", "Denizli  ", "Diyarbakır  ", "Edirne  ", "Elazığ  ", "Erzincan  ", "Erzurum  ", "Eskişehir  ", "Gaziantep  ", "Giresun  ", "Gümüşhane  ", "Hakkari  ", "Hatay  ", "Isparta  ", "Mersin  ", "İstanbul  ", "İzmir  ", "Kars  ", "Kastamonu  ", "Kayseri  ", "Kırklareli  ", "Kırşehir  ", "Kocaeli  ", "Konya  ", "Kütahya  ", "Malatya  ", "Manisa  ", "Kahramanmaraş  ", "Mardin  ", "Muğla  ", "Muş  ", "Nevşehir  ", "Niğde  ", "Ordu  ", "Rize  ", "Sakarya  ", "Samsun  ", "Siirt  ", "Sinop  ", "Sivas  ", "Tekirdağ  ", "Tokat  ", "Trabzon  ", "Tunceli  ", "Şanlıurfa  ", "Uşak  ", "Van  ", "Yozgat  ", "Zonguldak  ", "Aksaray  ", "Bayburt  ", "Karaman  ", "Kırıkkale  ", "Batman  ", "Şırnak  ", "Bartın  ", "Ardahan  ", "Iğdır  ", "Yalova  ", "Karabük  ", "Kilis  ", "Osmaniye  ", "Düzce" });
-            ogrdogumyeri.Location = new Point(291, 128);
+            ogrdogumyeri.Location = new Point(291, 132);
             ogrdogumyeri.Name = "ogrdogumyeri";
             ogrdogumyeri.Size = new Size(211, 30);
             ogrdogumyeri.TabIndex = 12;
@@ -237,7 +294,7 @@
             // ogrtime
             // 
             ogrtime.Font = new Font("Times New Roman", 12F, FontStyle.Italic, GraphicsUnit.Point, 162);
-            ogrtime.Location = new Point(252, 162);
+            ogrtime.Location = new Point(252, 163);
             ogrtime.Name = "ogrtime";
             ogrtime.Size = new Size(250, 30);
             ogrtime.TabIndex = 11;
@@ -246,7 +303,7 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Book Antiqua", 16.2F, FontStyle.Italic, GraphicsUnit.Point, 162);
-            label8.Location = new Point(6, 265);
+            label8.Location = new Point(0, 196);
             label8.Name = "label8";
             label8.Size = new Size(224, 34);
             label8.TabIndex = 7;
@@ -256,7 +313,7 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Book Antiqua", 16.2F, FontStyle.Italic, GraphicsUnit.Point, 162);
-            label7.Location = new Point(6, 298);
+            label7.Location = new Point(0, 230);
             label7.Name = "label7";
             label7.Size = new Size(241, 34);
             label7.TabIndex = 6;
@@ -318,7 +375,7 @@
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 162);
             button1.ForeColor = Color.White;
-            button1.Location = new Point(947, 160);
+            button1.Location = new Point(967, 365);
             button1.Name = "button1";
             button1.Size = new Size(100, 50);
             button1.TabIndex = 19;
@@ -328,110 +385,30 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.Image = Properties.Resources.bilkent;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(12, 12);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(929, 199);
+            pictureBox1.Size = new Size(1090, 146);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 17;
+            pictureBox1.TabIndex = 53;
             pictureBox1.TabStop = false;
-            // 
-            // label20
-            // 
-            label20.AutoSize = true;
-            label20.Font = new Font("Book Antiqua", 16.2F, FontStyle.Italic, GraphicsUnit.Point, 162);
-            label20.Location = new Point(6, 162);
-            label20.Name = "label20";
-            label20.Size = new Size(0, 34);
-            label20.TabIndex = 2;
-            // 
-            // label18
-            // 
-            label18.AutoSize = true;
-            label18.Font = new Font("Book Antiqua", 16.2F, FontStyle.Italic, GraphicsUnit.Point, 162);
-            label18.Location = new Point(6, 60);
-            label18.Name = "label18";
-            label18.Size = new Size(123, 34);
-            label18.TabIndex = 4;
-            label18.Text = "SOYADI";
-            // 
-            // label17
-            // 
-            label17.AutoSize = true;
-            label17.Font = new Font("Book Antiqua", 16.2F, FontStyle.Italic, GraphicsUnit.Point, 162);
-            label17.Location = new Point(6, 196);
-            label17.Name = "label17";
-            label17.Size = new Size(66, 34);
-            label17.TabIndex = 5;
-            label17.Text = "ADI";
-            // 
-            // label15
-            // 
-            label15.AutoSize = true;
-            label15.Font = new Font("Book Antiqua", 16.2F, FontStyle.Italic, GraphicsUnit.Point, 162);
-            label15.Location = new Point(6, 94);
-            label15.Name = "label15";
-            label15.Size = new Size(224, 34);
-            label15.TabIndex = 7;
-            label15.Text = "CEP TELEFONU";
-            // 
-            // veliadi
-            // 
-            veliadi.Location = new Point(252, 26);
-            veliadi.Name = "veliadi";
-            veliadi.Size = new Size(250, 30);
-            veliadi.TabIndex = 26;
-            // 
-            // velisoyadi
-            // 
-            velisoyadi.Location = new Point(252, 59);
-            velisoyadi.Name = "velisoyadi";
-            velisoyadi.Size = new Size(250, 30);
-            velisoyadi.TabIndex = 25;
-            // 
-            // velitel
-            // 
-            velitel.Location = new Point(252, 93);
-            velitel.Name = "velitel";
-            velitel.Size = new Size(250, 30);
-            velitel.TabIndex = 24;
-            // 
-            // groupBox2
-            // 
-            groupBox2.Controls.Add(velitel);
-            groupBox2.Controls.Add(velisoyadi);
-            groupBox2.Controls.Add(veliadi);
-            groupBox2.Controls.Add(label15);
-            groupBox2.Controls.Add(label18);
-            groupBox2.Controls.Add(label20);
-            groupBox2.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 162);
-            groupBox2.Location = new Point(564, 465);
-            groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(508, 171);
-            groupBox2.TabIndex = 16;
-            groupBox2.TabStop = false;
-            groupBox2.Text = "VELİ BİLGİLERİ";
             // 
             // ogrkayit
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1114, 647);
+            Controls.Add(pictureBox1);
             Controls.Add(button1);
             Controls.Add(groupBox3);
-            Controls.Add(groupBox2);
             Controls.Add(groupBox1);
-            Controls.Add(pictureBox1);
             Name = "ogrkayit";
             Text = "ogrkayit";
-          //  Load += this.ogrkayit_Load;
             groupBox3.ResumeLayout(false);
             groupBox3.PerformLayout();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            groupBox2.ResumeLayout(false);
-            groupBox2.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -450,7 +427,7 @@
         private MaskedTextBox ogrtel;
         private MaskedTextBox ogradi;
         private MaskedTextBox ogrsoyadi;
-        private MaskedTextBox maskedkimlik;
+        private MaskedTextBox TCKimlik;
         private ComboBox ogrdogumyeri;
         private DateTimePicker ogrtime;
         private Label label8;
@@ -461,14 +438,12 @@
         private Label label3;
         private Label label1;
         private Button button1;
-        private PictureBox pictureBox1;
         private Label label17;
-        private Label label20;
         private Label label18;
-        private Label label15;
         private MaskedTextBox veliadi;
         private MaskedTextBox velisoyadi;
-        private MaskedTextBox velitel;
-        private GroupBox groupBox2;
+        private PictureBox pictureBox1;
+        private ComboBox Gender;
+        private Label cinsiyet;
     }
 }

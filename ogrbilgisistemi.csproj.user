@@ -7,19 +7,19 @@
     <Compile Update="Giriş\Ogrgiris.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Kayıt Ol\Register.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="İdari Giriş\Devamsizlik.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="Giriş\Giris.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Giriş\IdariSayfasi.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="İdari Giriş\Akadkayit.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="İdari Giriş\Ogrkayit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="İdari Giriş\ogrliste.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

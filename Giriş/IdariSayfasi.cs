@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ogrbilgisistemi.Giriş;
+using ogrbilgisistemi.İdari_Giriş;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,20 @@ namespace ogrbilgisistemi.Giriş
         public IdariSayfasi()
         {
             InitializeComponent();
+        }
+
+        private void ogrkayit_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ogrkayit Formac = new ogrkayit();
+            Formac.Show();
+        }
+
+        private void akadkayit_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Akadkayit Formac = new Akadkayit();
+            Formac.Show();
         }
     }
 }

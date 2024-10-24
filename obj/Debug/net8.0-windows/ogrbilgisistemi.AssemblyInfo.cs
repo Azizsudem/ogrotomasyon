@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ogrbilgisistemi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a048376333ec358a954f584836433a34615dad93")]
 [assembly: System.Reflection.AssemblyProductAttribute("ogrbilgisistemi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ogrbilgisistemi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
